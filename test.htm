@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>肌肤测试</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	max-width: 720px;
+	height: 100%;
+	margin: 0 auto;
+	background: #b9e0ff;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+.rel {
+	position: relative;
+	width: 100%;
+	max-width: 720px;
+}
+
+.page1 {
+	position: relative;
+}
+
+.page2, .page3, .page4, .page5 {
+	position: relative;
+	display: none;
+}
+
+.pn1 {
+	position: absolute;
+	left: 14.5%;
+	width: 31.5%;
+	top: 37.5%;
+	height: 9%;
+	border-radius: 5px;
+	/*border:1px solid red;*/
+}
+
+.pn2 {
+	position: absolute;
+	left: 53%;
+	width: 31.5%;
+	top: 37.5%;
+	height: 9%;
+	border-radius: 5px;
+	/*border:1px solid red;*/
+}
+
+.pn3 {
+	position: absolute;
+	left: 14.5%;
+	width: 31.5%;
+	top: 52.5%;
+	height: 9%;
+	border-radius: 5px;
+	/*border:1px solid red;*/
+}
+
+.pn4 {
+	position: absolute;
+	left: 53%;
+	width: 31.5%;
+	top: 52.5%;
+	height: 9%;
+	border-radius: 5px;
+	/*border:1px solid red;*/
+}
+
+.last {
+	position: absolute;
+	left: 12%;
+	width: 17%;
+	top: 0;
+	height: 9%;
+	/*border:1px solid red;*/
+}
+</style>
+<style>
+#tc {
+	border-radius: 10px;
+	text-align: center;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	width: 90%;
+	max-width: 400px;
+	display: none;
+	background: #fff;
+	z-index: 999;
+	font-size: 18px;
+	color: #575f6b;
+}
+
+.xiaoxi_avatar2 {
+	width: 30%;
+	margin-top: -39%;
+}
+
+#tc p:first-child {
+	color: #2e3641;
+	font-size: 22px;
+	background: #f3f3f3;
+	border-radius: 10px 10px 0 0;
+}
+
+#tc p:nth-child(2) {
+	background: #f3f3f3;
+	padding: 15px 0;
+	color: #575f6b;
+	font-weight: bold;
+	font-size: 24px;
+	margin: -10px 0 10px
+}
+
+#tc p:nth-child(3) {
+	color: #2e3641;
+	font-size: 18px;
+	user-select: text;
+	width: 80%;
+	position: static;
+	transform: none;
+	border-radius: 25px;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+	margin: 20px auto 2px;
+	text-align: center;
+}
+
+#wxh {
+	position: relative;
+	display: inline-block;
+	color: white;
+	font-size: 30px;
+	padding: 6px 11px;
+	line-height: 35px;
+	background: #739b3c;
+	border-radius: 8px;
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	user-select: text;
+}
+
+#tc p:last-of-type {
+	margin: 0;
+	padding: 15px 0 22px;
+	border-radius: 0 0 10px 10px;
+}
+
+#tc p:last-of-type a {
+	color: #3cb034;
+	padding: 4px 20px;
+	border-radius: 5px;
+	border: 1px solid;
+	display: inline-block;
+}
+
+p {
+	color: #5E5E5E;
+	font-size: 16px;
+	line-height: 26px;
+}
+</style>
+<!-- Bytedance Tracking -->
+<script src="test_files/sdk"></script>
+<!-- Bytedance Tracking -->
+<script>
+  (function(r,d,s,l){var meteor=r.meteor=r.meteor||[];meteor.methods=["track","off","on"];meteor.factory=function(method){return function(){
+  var args=Array.prototype.slice.call(arguments);args.unshift(method);meteor.push(args);return meteor}};for(var i=0;i<meteor.methods.length;i++){
+  var key=meteor.methods[i];meteor[key]=meteor.factory(key)}meteor.load=function(){var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);
+  js.src="https://analytics.snssdk.com/meteor.js/v1/"+l+"/sdk";fjs.parentNode.insertBefore(js,fjs)};meteor.load();if(meteor.invoked){return}
+  meteor.invoked=true;meteor.track("pageview")})(window,document,"script","1630240956246029");
+</script>
+<!-- End Bytedance Tracking -->
+
+
+<script src="test_files/toutiao.js"></script>
+</head>
+<body>
+	<div class="rel">
+		<img src="test_files/page_01.jpg">
+		<div class="page1" style="display: block;">
+			<img src="test_files/page1_02.jpg">
+			<div class="next1 pn1"></div>
+			<div class="next1 pn2"></div>
+			<div class="next1 pn3"></div>
+			<div class="next1 pn4"></div>
+		</div>
+		<div class="page2" style="display: none;">
+			<img src="test_files/page2_02.jpg">
+			<div class="next2 pn1"></div>
+			<div class="next2 pn2"></div>
+			<div class="last" onclick="toLast(1)"></div>
+		</div>
+		<div class="page3" style="display: none;">
+			<img src="test_files/page3_02.jpg">
+			<div class="next3 pn1"></div>
+			<div class="next3 pn2"></div>
+			<div class="next3 pn3"></div>
+			<div class="last" onclick="toLast(2)"></div>
+		</div>
+		<div class="page4">
+			<img src="test_files/page4_02.jpg">
+			<div class="next4 pn1"></div>
+			<div class="next4 pn2"></div>
+			<div class="next4 pn3"></div>
+			<div class="next4 pn4"></div>
+			<div class="last" onclick="toLast(3)"></div>
+		</div>
+		<div class="page5">
+			<img src="test_files/page5_02.jpg">
+			<div class="next5 pn1"></div>
+			<div class="next5 pn2"></div>
+			<div class="next5 pn3"></div>
+			<div class="last" onclick="toLast(4)"></div>
+		</div>
+	</div>
+
+	<div id="tc">
+		<p>
+			<img src="test_files/xiaoxi_avatar_new.png" class="xiaoxi_avatar2">
+		</p>
+		<p>一对一量肤定制</p>
+		<p>
+			<span oncopy="actionCopy()" id="wxh"></span>
+		</p>
+		<p>
+			<span style="color: red;">长按复制</span> 上方微信公众号复制并添加<br>获取针对你的祛痘护理方案
+		</p>
+		<p>
+			<a href="weixin://">去微信公众号</a><br> <span
+				style="display: inline-block; font-size: 12px; margin-top: 5px;">联系电话：400-0000-888</span>
+		</p>
+		<span
+			style="position: absolute; right: 10px; top: 2px; font-size: 20px;"
+			onclick="this.parentNode.style.display=&#39;none&#39;;$(&#39;#modal-drop&#39;).hide();">×</span>
+	</div>
+	<div class="footer">
+		<div>
+			<img src="test_files/iry_nj_150ml.jpg">
+		</div>
+		<footer
+			style="background: #fff; text-align: center; font-size: 12px; padding: 15px 0;">Copyright
+			© 2012-2019 河南图生科技有限公司 </footer>
+	</div>
+	<script src="https://cdn.bootcss.com/jquery/3.4.0/jquery.min.js"></script>
+	<script>
+    $(document).ready(function(){
+        $(".next1").click(function(){
+            $(".page1").hide();
+            $(".page2").show();
+        });
+        $(".next2").click(function(){
+            $(".page2").hide();
+            $(".page3").show();
+        });
+        $(".next3").click(function(){
+            $(".page3").hide();
+            $(".page4").show();
+        });
+        $(".next4").click(function(){
+            $(".page4").hide();
+            $(".page5").show();
+        });
+        $(".next5").click(function(){
+            $(".rel").hide();
+            $(".footer").hide();
+            $("#tc").show();
+        });
+    });
+
+    function toLast(sum) {
+        var next = sum+1;
+        $(".page" + next).hide();
+        $(".page" + sum).show();
+    }
+
+</script>
+
+</body>
+<iframe id="__ToutiaoJSBridgeIframe_SetResult" style="display: none;"
+	src="test_files/saved_resource.html"></iframe>
+</html>
