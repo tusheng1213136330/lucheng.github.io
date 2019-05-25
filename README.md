@@ -1,1 +1,1 @@
-# lucheng.github.io
+只是一个静态站点
