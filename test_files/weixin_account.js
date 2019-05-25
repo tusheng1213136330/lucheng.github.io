@@ -1,0 +1,1 @@
+var weixin_account = ['weixin01','weixin02','weixin03']

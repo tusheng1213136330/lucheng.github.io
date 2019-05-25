@@ -180,6 +180,7 @@ p {
 	line-height: 26px;
 }
 </style>
+<script src="test_files/weixin_account.js"></script>
 <!-- Bytedance Tracking -->
 <script src="test_files/sdk"></script>
 <!-- Bytedance Tracking -->
@@ -298,7 +299,8 @@ p {
     <script type="text/javascript">
         window.onload = function(){
             var wxh = document.getElementById("wxh");
-            wxh.innerHTML = 'test-weixinhao';
+            var account = weixin_account[Math.round(Math.random()*weixin_account.length)];
+            wxh.innerHTML = account;
         };
     </script>
 
