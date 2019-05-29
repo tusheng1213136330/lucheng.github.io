@@ -1,1 +1,1 @@
-var weixin_account = ['weixin01','weixin02','weixin03']
+var weixin_account = ['15003993657','15003993657','15003993657']
