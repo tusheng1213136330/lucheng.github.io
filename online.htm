@@ -1,0 +1,864 @@
+
+<!-- saved from url=(0027)https://sf9.shaomi.net/sf9/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./online_files/hm.js"></script><script src="./online_files/toutiao.js"></script></head><body style="" onbeforeunload="ojp()">﻿<!--已拥有著作权和相关国家专利 抄袭者必将追究到底 受相关法律制裁-->
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta content="telephone=no" name="format-detection">
+<title>在线咨询</title>
+<script src="./online_files/sdk"></script><script>
+  (function(r,d,s,l){var meteor=r.meteor=r.meteor||[];meteor.methods=["track","off","on"];meteor.factory=function(method){return function(){
+  var args=Array.prototype.slice.call(arguments);args.unshift(method);meteor.push(args);return meteor}};for(var i=0;i<meteor.methods.length;i++){
+  var key=meteor.methods[i];meteor[key]=meteor.factory(key)}meteor.load=function(){var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);
+  js.src="https://analytics.snssdk.com/meteor.js/v1/"+l+"/sdk";fjs.parentNode.insertBefore(js,fjs)};meteor.load();if(meteor.invoked){return}
+  meteor.invoked=true;meteor.track("pageview")})(window,document,"script","2203042479353115");
+</script>
+<link href="./online_files/style.css" rel="stylesheet" type="text/css" media="all">
+<script type="text/javascript" src="./online_files/jquery.js"></script>
+<script type="text/javascript" src="./online_files/lj.js"></script>
+<script type="text/javascript" src="./online_files/tz.js"></script>
+<style>
+
+.scopy {
+	position: absolute;
+    left: 50%;
+    bottom: 45px;
+    background: rgba(0,0,0,.5);
+    padding: 2px 15px;
+    border-radius: 6px;
+	display:none;
+}
+.scopy::after {
+	content: "";
+    position: absolute;
+    bottom: -16px;
+    left: 40%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 8px 8px;
+	border-color: rgba(0,0,0,.5) transparent transparent transparent;
+}
+
+
+
+
+
+#lx>span{color: #ff6144;font-weight: 600;}
+.loading{
+	width: 150px;
+	height: 10px;
+	margin: 0 auto;
+	margin-top:20px;
+}
+.loading span{
+	display: inline-block;
+	width: 10px;
+	height: 100%;
+	margin-right: 5px;
+	border-radius: 50%;
+	background: #302825;
+	-webkit-animation: load 1.04s ease infinite;
+}.wx{color: #f00;
+    font-weight: bold;}
+.loading span:last-child{
+	margin-right: 0px; 
+}
+@-webkit-keyframes load{
+	0%{
+		opacity: 1;
+		-webkit-transform: scale(1.3);
+	}
+	100%{
+		opacity: 0.2;
+		-webkit-transform: scale(.3);
+	}
+}
+.loading span:nth-child(1){
+	-webkit-animation-delay:0.13s;
+}
+.loading span:nth-child(2){
+	-webkit-animation-delay:0.26s;
+}
+.loading span:nth-child(3){
+	-webkit-animation-delay:0.39s;
+}
+.loading span:nth-child(4){
+	-webkit-animation-delay:0.52s;
+}
+.loading span:nth-child(5){
+	-webkit-animation-delay:0.65s;
+}
+.qq_Mask {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75) none repeat scroll 0% 0%;
+    z-index: 100000;
+    display: none;
+    margin: 0 auto;
+	max-width: 640px;
+}
+.qq_Mask img {
+    position: absolute;
+    bottom: 40%;
+    max-width: 640px;
+    left: 10%;
+    width: 80%;
+    top: inherit;
+}
+.qq_Mask .alertleft {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 60px;
+    bottom: 45%;
+    left: 10%;
+}
+
+.qq_Mask .alertright {
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 60px;
+    bottom: 45%;
+    right: 10%;
+}
+
+.wxicon {width:60px; height:60px; position: fixed; top: 20%; right: 6px; z-index:100}
+.wxicon img {width:100%; height:100%; }
+
+</style>
+
+
+<!--弹窗-->
+<style>
+#layer{
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .8);
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: 100000;
+	}
+
+	.fixed_box{
+		width: 100%;
+		position: relative;
+		position: absolute;
+		top: 52%;
+		left: 50%;
+		transform: translate3d(-50%,-50%,0);
+		max-width: 640px;
+	}
+	.fixed_box img{
+		width:100%;
+	}
+	.fixed_box .weixin_box{  
+		width:64%;
+		height: 19%;
+		position: absolute;
+		top:52%;
+		left:17.5%;
+		display: flex;
+	}
+
+	.fixed_box .weixin_box .weixin{
+		width: 80%;
+		height: 86%;
+		position: absolute;
+		top: 8%;
+		left: 10%;
+		display: flex;
+		background: url(./images/layer_03.png) no-repeat;
+		background-size: 100%;
+		border: none;
+	}
+
+	.fixed_box a{
+		display: inline-block;
+		position: absolute;
+		width: 34%;
+		height: 15%;
+		bottom: 8%;
+		left: 30%;
+	}
+
+	.fixed_box .close{
+		display: inline-block;
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 0%;
+		right: 1%;
+		color: red;
+		font-size: 30px;
+		line-height: 25px;
+		text-align: center;
+		border: 1px solid red;
+		border-radius: 50%;
+	}
+	.content .copyright {
+		font-size: 0.8rem;
+		color: #999;
+		text-align: center;
+	}
+	
+	.layer-btn {
+		    width: 38%;
+			height: 10%;
+			position: absolute;
+			bottom: 7%;
+			left: 29.5%;
+			display: flex;
+			background: url(./images/layer-btn.png) no-repeat;
+			background-size: 100%;
+			border: none;
+		
+	}
+
+.popup-wrapper {
+    visibility: hidden;
+    z-index: 1000;
+    opacity: 0;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.popup-wrapper.active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.popup-wrapper .popup-inner {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    max-width: 640px;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -ms-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.popup-wrapper .popup-close {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+    background-image: url(images/popup_close.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.popup-wrapper .popup-bg img {
+    display: block;
+    width: 100%;
+}
+
+.popup-wrapper .popup-content .wechat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 11%;
+    position: absolute;
+    top: 53%;
+    left: 25%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f1e005;
+}
+
+.popup-wrapper .popup-content .popup-btn {
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    width: 40%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-indent: -9999px;
+}
+.btn-wrapper .button{
+    position: absolute;
+    bottom: 15%;
+    width: 60%;
+    right: 18%;
+}
+.select2 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
+    /*height: 84px;
+    background: #fff;*/
+    z-index: 100;
+    padding: 14px 6px;
+    box-sizing: border-box;
+    font-size: 0;
+    text-align: center;
+}
+.select2 a { 
+    display: inline-block;
+    padding: 5px 0;
+    background: #ff6144;
+    color: #Fff;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    width: 23%;
+    text-align: center;
+    margin: 1%;
+}
+
+.select_botton {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
+    /*height: 84px;
+    background: #fff;*/
+    z-index: 100;
+    padding: 14px 6px;
+    box-sizing: border-box;
+    font-size: 0;
+    text-align: center;
+}
+.select_botton a {
+    display: inline-block;
+    padding: 5px 0;
+    background: #ff6144;
+    color: #Fff;
+    font-size: 14px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    width: 30%;
+    text-align: center;
+    margin: 1%;
+}
+.select_botton .w32 {width: 31%;}
+.select_botton .chocolate { background: chocolate;}
+.select_botton .cadetblue { background: cadetblue;}
+.select_botton .cornflowerblue { background: cornflowerblue;}
+.select_botton .tomato { background: tomato;}
+.header_img{
+    border: solid 3px #ff6144;
+    margin-top: 3px;
+    border-radius: 10px;
+    overflow: hidden;
+	}
+.h_btn{
+	width: 35%;
+    line-height: 1.75rem;
+    position: absolute;
+    bottom: 28px;
+    right: 7%;
+    color: #1464c2;
+    font-size: .8rem;
+    font-weight: bold;
+    text-align: center;
+    background: #fff;
+	}
+
+.footers {
+    position: fixed;
+    z-index: 999;
+    width: 90%;
+    bottom: 10px;
+    color: #fff;
+    max-width: 610px;
+    margin: 0 auto;
+    background: #EEEEEE
+}
+.footers a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    background: yellow;
+}
+.iwjkk1{width:70%;    float: left;}
+.iwjkk1 img{/*border-radius:50%;*/width:50px;height:50px;padding:5px 0;margin:0 auto 10px;display:block;}
+.iwjkk2{width:70%; text-align:center;  float: left;margin-top:20px;padding-left: 20px;line-height: 30px; position: relative;}
+.iwjkk2 span{font-size:17px;color:#000; font-weight:800; margin-right: 10px;}/*FF6600*/
+.iwjkk2 span #iwjjk{background:none;color:#FF6600;padding:0}
+
+.iwjkk3{width:30%;    float: left;}
+.iwjkk3 .ioakj{font-size: 16px; background: #FF6600; color: #fff; text-align: center; padding: 10px 10px; border-radius: 5px; margin: 10px 10px 0 0;}
+.ioakj {
+    animation: big 1.4s ease infinite alternate;
+    -webkit-animation: big 1.4s ease infinite alternate;
+    -moz-animation: big 1.4s ease infinite alternate;
+    -ms-animation: big 1.4s ease infinite alternate;
+    -o-animation: big 1.4s ease infinite alternate;
+}
+@keyframes big {
+    0% {
+        transform: scale(1);
+    }
+    18% {
+        transform: scale(1.1);
+    }
+    32% {
+        transform: scale(1);
+    }
+    48% {
+        transform: scale(1.1);
+    }
+    64% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@-webkit-keyframes big {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    18% {
+        -webkit-transform: scale(1.1);
+    }
+    32% {
+        -webkit-transform: scale(1);
+    }
+    48% {
+        -webkit-transform: scale(1.1);
+    }
+    64% {
+        -webkit-transform: scale(1);
+    }
+    80% {
+        -webkit-transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+    }
+}
+@-moz-keyframes big {
+    0% {
+        -moz-transform: scale(1);
+    }
+    18% {
+        -moz-transform: scale(1.1);
+    }
+    32% {
+        -moz-transform: scale(1);
+    }
+    48% {
+        -moz-transform: scale(1.1);
+    }
+    64% {
+        -moz-transform: scale(1);
+    }
+    80% {
+        -moz-transform: scale(1.1);
+    }
+    100% {
+        -moz-transform: scale(1);
+    }
+}
+@-o-keyframes big {
+    0% {
+        -o-transform: scale(1);
+    }
+    18% {
+        -o-transform: scale(1.1);
+    }
+    32% {
+        -o-transform: scale(1);
+    }
+    48% {
+        -o-transform: scale(1.1);
+    }
+    64% {
+        -o-transform: scale(1);
+    }
+    80% {
+        -o-transform: scale(1.1);
+    }
+    100% {
+        -o-transform: scale(1);
+    }
+}
+@-ms-keyframes big {
+    0% {
+        -ms-transform: scale(1);
+    }
+    18% {
+        -ms-transform: scale(1.1);
+    }
+    32% {
+        -ms-transform: scale(1);
+    }
+    48% {
+        -ms-transform: scale(1.1);
+    }
+    64% {
+        -ms-transform: scale(1);
+    }
+    80% {
+        -ms-transform: scale(1.1);
+    }
+    100% {
+        -ms-transform: scale(1);
+    }
+}
+</style>
+
+<!--/弹窗-->
+<div class="Mask">
+   <img src="./online_files/zizhi.jpg">
+</div>
+<header class="ly-header">
+  <nav> <a href="https://sf9.shaomi.net/" id="set_cache"><i></i></a>
+    <h2>在线咨询</h2>
+  </nav>
+</header>
+<section class="ly-section1">
+<div class="talk" id="messbox"> 
+	<div class="line ly-hide" style="display: block;">
+		<div class="left"> 
+		<img src="./online_files/header.jpg" width="40px">
+		<div> <i></i>您好，我是专业固发生发老师，非常高兴为您服务！</div>
+		</div>
+		<div class="ly-clear"></div>
+	</div>
+	
+	<div class="line ly-hide line_wx" style="display: block;">
+	<div class="left"> <img src="./online_files/header.jpg" width="40px">
+	<div> <i></i> 脱发受年龄增长、激素分泌状况、不良生活习惯等多种因素影响，根源是头发毛囊变的不健康甚至萎缩，头发生长环境遭到破坏。脱发让人凭空年老十岁，严重影响个人形象，想要快速永久的固发生发？认真回答老师下面的几个问题。 </div>
+	</div>
+	</div>
+<div class="loading" style="display: none;">连线中  <span></span><span></span><span></span><span></span><span></span></div><div class="line ly-hide" style="display: block;" id="fp"><div class="left"> <img src="./online_files/header.jpg" width="40px"><div id="lx"><i></i> 咱们的脱发状况更接近哪一种？<br><span>点击下方按钮即可↓</span></div></div><div class="ly-clear"></div></div><div id="msg"></div></div>
+</section>
+
+<div class="select2" id="option_0" style="display:none;">
+<a href="javascript:" style="width: 90%;font-size: 20px;" class="rock2">开始对话</a>
+</div>
+<script type="text/javascript" src="./online_files/53kf.js"></script>
+
+<div class="select_botton" style="" id="option_1">
+<a href="javascript:" data-w="1" style="width: 30%;">头发细软稀疏</a>
+<a href="javascript:" data-w="2" style="width: 30%;">区块性掉发</a>
+<a href="javascript:" data-w="3" style="width: 30%;">头顶脱发</a>
+<a href="javascript:" data-w="4" style="width: 30%;">发际线呈M字型</a>
+<a href="javascript:" data-w="5" style="width: 30%;">产后大量掉发</a>
+<a href="javascript:" data-w="6" style="width: 30%;">其他</a>
+</div>
+
+<div class="select_botton" style="display:none;" id="option_2">
+<a href="javascript:" data-w="7">20岁以下</a>
+<a href="javascript:" data-w="8">21-25岁</a>
+<a href="javascript:" data-w="9">26-30岁</a>
+<a href="javascript:" data-w="10">31-35岁</a>
+<a href="javascript:" data-w="11">36-45岁</a>
+<a href="javascript:" data-w="12">45岁以上</a>
+</div>
+<div class="select_botton" style="display:none;" id="option_3">
+<a href="javascript:" data-w="13">1年以下</a>
+<a href="javascript:" data-w="14">1-3年</a>
+<a href="javascript:" data-w="15">3-5年</a>
+<a href="javascript:" data-w="16">5年以上</a>
+</div>
+<div class="select_botton" style="display:none;" id="option_4">
+<a href="javascript:" data-w="17">是</a>
+<a href="javascript:" data-w="18">否</a>
+</div>
+<div class="select_botton" style="display:none;" id="option_5">
+<a href="javascript:" data-w="19">不容易</a>
+<a href="javascript:" data-w="20">正常</a>
+<a href="javascript:" data-w="21">极为容易</a>
+</div>
+<div class="select_botton" style="display:none;" id="option_6">
+<a href="javascript:" data-w="22">是</a>
+<a href="javascript:" data-w="23">否</a>
+</div>
+<div class="select_botton" style="display:none;" id="option_7">
+<a href="javascript:" data-w="24">不明显</a>
+<a href="javascript:" data-w="25">非常明显</a>
+</div>
+<div class="select_botton" style="display:none;" id="option_8">
+<a href="javascript:" data-w="26">联系老师</a>
+<a href="javascript:" data-w="27">快速获取生发方案</a>
+</div>
+
+<footer class="ly-footer" style="display:none;" id="option_8">
+  <div><a href="javascript:void(0);" id="wx_open" style="display: none;"></a></div>
+  <div style="padding-left: 20px;">
+  <input name="client_id" value="" type="hidden" id="client_id">
+  <input name="uid" value="2" type="hidden">
+  <input name="g_id" value="" type="hidden" id="g_id">
+  <textarea id="keyword" placeholder="请输入..."></textarea>
+  </div>
+  <div>
+  <button id="ws">发送</button>
+  </div>
+  
+    <p class="animated-circles animated" style="display:none;">
+		<b class="circle c-1"></b>
+		<b class="circle c-2"></b>
+		<b class="circle c-3"></b>
+    </p>
+	
+	
+</footer>
+<div class="qq_Mask">
+	<div class="pr">
+		<img src="./online_files/open2.png">
+		<div class="alertleft"></div>
+		<div class="alertright" id="qq_Mask_right"></div>
+	</div>
+</div>
+<style>
+
+.rock2{
+    animation: clock 1.5s ease infinite alternate;
+    -webkit-animation: clock 1.5s ease infinite alternate;
+    -moz-animation: clock 1.5s ease infinite alternate;
+    -ms-animation: clock 1.5s ease infinite alternate;
+    -o-animation: clock 1.5s ease infinite alternate;
+}
+/* 动画 */
+@keyframes clock{ 
+    0%{transform: scale(0.9);}
+    18%{transform: scale(1);}
+    32%{transform: scale(0.9);}
+    48%{transform: scale(1);}
+    64%{transform: scale(0.9);}
+    80%{transform: scale(1);}
+    100%{transform: scale(0.9);}
+}
+@-webkit-keyframes clock{ 
+    0%{transform: scale(0.9);}
+    18%{transform: scale(1);}
+    32%{transform: scale(0.9);}
+    48%{transform: scale(1);}
+    64%{transform: scale(0.9);}
+    80%{transform: scale(1);}
+    100%{transform: scale(0.9);}
+}
+@-moz-keyframes clock{ 
+    0%{transform: scale(0.9);}
+    18%{transform: scale(1);}
+    32%{transform: scale(0.9);}
+    48%{transform: scale(1);}
+    64%{transform: scale(0.9);}
+    80%{transform: scale(1);}
+    100%{transform: scale(0.9);}
+}
+@-o-keyframes clock{ 
+    0%{transform: scale(0.9);}
+    18%{transform: scale(1);}
+    32%{transform: scale(0.9);}
+    48%{transform: scale(1);}
+    64%{transform: scale(0.9);}
+    80%{transform: scale(1);}
+    100%{transform: scale(0.9);}
+}
+@-ms-keyframes clock{ 
+    0%{transform: scale(0.9);}
+    18%{transform: scale(1);}
+    32%{transform: scale(0.9);}
+    48%{transform: scale(1);}
+    64%{transform: scale(0.9);}
+    80%{transform: scale(1);}
+    100%{transform: scale(0.9);}
+}
+
+    .animated-circles {
+		display:block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 65px!important;
+		height: 35px!important;
+		margin: 7px 5px 0 0;
+		border-radius: 5px;
+	}
+	.animated-circles b {display:block; }
+	.animated { -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both }
+	.animated-circles .circle { 
+				background: rgba(38,199,252,.25); 
+				width: 65px; 
+				height: 35px; 
+				border-radius: 5px; 
+				position: absolute; 
+				z-index: 49; 
+				transform: scale(1); 
+				-webkit-transform: scale(1)
+	}
+	.animated-circles.animated .c-1 { animation: 2s scaleToggleOne cubic-bezier(.25, .46, .45, .94) forwards }
+	.animated-circles.animated .c-2 { animation: 2.5s scaleToggleTwo cubic-bezier(.25, .46, .45, .94) forwards }
+	.animated-circles.animated .c-3 { animation: 3s scaleToggleThree cubic-bezier(.25, .46, .45, .94) forwards }
+	.animation-stopped .circle { opacity: 0!important }
+	.animation-stopped .circle { opacity: 0!important }
+	
+    .ceng{
+        position: fixed;
+        background: rgba(0, 0, 0, 0.7490196078431373);
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        z-index: 999;
+        width: 100%;
+        float: none;
+        margin: 0 auto;
+        max-width: 750px;
+    }
+    .ceng-body{
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 45%;
+        background: #fff;
+        border-radius: 20px;
+    }
+    .ceng-content{
+        border: 5px solid #ced7d4;
+        height: 370px;
+        border-radius: 10px;
+    }
+    .ceng-a{
+        text-align: center;
+        padding-top: 90px;
+        position: static;
+        z-index: 99999999999;
+    }
+    .ceng-a p{
+        margin-bottom: 5px;
+        color: #333;
+    }
+</style>
+<div class="ceng col-md-4" style="overflow: hidden; display: none;z-index: 1000;max-width: 480px;">
+    <div style=" width:300px; height:355px; position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%); background:url(./images/ywx.png) no-repeat; background-size:cover;">
+	
+        
+		
+        <div class="statistics02" style="width: 194px;height: 40px;background: transparent;position: absolute;top: 184px;left: 51px;font-size: 16px;color: white;outline-style: none;border: none;-webkit-appearance: none; text-align: center; line-height: 75px;" oncopy="myFunction5()"> 15529256098 </div>
+		
+		
+        <span style="
+		text-align:center; position:absolute; right:10px;top:50px; background:#4676d9;border-radius:100%; width:30px; height:30px; line-height:30px; color:#fff;cursor: pointer;" class="close-pop">X</span>
+		
+		
+        <a href="weixin://" style="
+	    width: 100%;
+    height: 60px;
+    display: block;
+    margin-top: 280px;"></a>
+	
+	
+    </div>
+   
+</div>
+<script type="text/javascript" src="./online_files/jquery.cookie.js"></script>
+<!-- <div id="flow_wx">
+      <a id="popup" href="javascript:gototankuang();"></a>
+</div> -->
+
+
+<script type="text/javascript">
+function myFunction2(sid){
+	$(".dj").attr("data-copy",1);
+	$(".qq_Mask").fadeIn(200);
+}
+function myFunction3(){	
+	var copyid=$(".dj").attr("data-copy");
+	if(copyid==1){
+		location.href="weixin://";
+	}else{
+		$(".scopy").fadeIn(400).fadeOut(3000);
+	}
+	
+}
+function myFunction5(){	
+
+
+
+}
+function ojp(){
+	cache_html();
+}
+(function($) {
+	$(".close-pop").on("click",function () {
+            $(".ceng").hide();
+        })
+	$(".wxicon").click(function(){
+		$(".popup-wrapper").css("display",'block');
+	});
+	$(".alertleft").click(function(){
+	 location.href="weixin://";
+	   $(".qq_Mask").fadeOut(200); 
+	})
+
+	$(".alertright").click(function(){
+	  location.href="weixin://";
+	  meteor.track('wechat', {convert_id: "1627155007958030" });
+	  $(".qq_Mask").fadeOut(200);
+	})
+	$(".popup-btn").click(function(){
+		//$("#layer").css("display",'block');
+		//location.href="";
+	});
+	$(".popup-close").click(function(){
+		$(".popup-wrapper").css("display",'none');
+	});
+	$("#gzh").click(function(){
+		//location.href="";
+	});
+	$(".weixin_box").click(function(){
+		window.location.href = "/t02/?zx=1";
+	});
+	/* $(document).on('click','.dj',function(){
+		location.href="weixin://";
+	}) */
+	setTimeout(function(){
+		$(".animated-circles").addClass("animated")
+	},8000);
+	
+})(jQuery);
+</script>
+
+
+<script>
+var session="sf9tl6h3fu5u6chbq3re3taartjf3";var wx="sfkf1";var qudao="sf9";var str1='<div class="line ly-hide" style="display: block;" id="fp"><div class="left"> <img src="images/header.jpg" width="40px"><div id="lx"><i></i> 咱们的脱发状况更接近哪一种？<br><span>点击下方按钮即可↓</span></div></div><div class="ly-clear"></div></div><div id="msg"></div>';var str2='';var pwx="15529256098";var fot='<div class="line"><div class="footers"><div class="nr"><div class="iwjkk2"><div class="scopy">请先复制</div><span>长按复制</span><span style="padding: 2px 10;color: #f00;font-weight: bold;" oncopy="myFunction2()"> 15529256098 </span></div><div class="iwjkk3" onclick="myFunction3()"><div class="ioakj dj" data-copy="0">去微信</div></div></div></div></div>';function cache_html(){var str=$("#msg").html();if(str!=null){localStorage.setItem(session,str)}}function pj_html(str){var pzixun='<div class="line"><div class="right"> <img src="images/header2.png" width="40px"><div><i></i> '+str+'</div></div><div class="ly-clear"></div></div>';return pzixun}setTimeout(function(){$('\x2e\x6c\x79\x2d\x73\x65\x63\x74\x69\x6f\x6e\x31 \x2e\x6c\x69\x6e\x65\x3a\x66\x69\x72\x73\x74')["\x66\x61\x64\x65\x49\x6e"](100)},300);setTimeout(function(){$('\x2e\x6c\x79\x2d\x73\x65\x63\x74\x69\x6f\x6e\x31 \x2e\x6c\x69\x6e\x65\x5f\x7a\x69\x7a\x68\x69')["\x66\x61\x64\x65\x49\x6e"](100)},600);$(function(){if($["\x63\x6f\x6f\x6b\x69\x65"]('\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64')){$("\x23\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64")["\x76\x61\x6c"]($["\x63\x6f\x6f\x6b\x69\x65"]('\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64'));$("\x23\x67\x5f\x69\x64")["\x76\x61\x6c"]($["\x63\x6f\x6f\x6b\x69\x65"]('\x67\x5f\x69\x64'));get_ws()}$("#option_0").click(function(){$("#option_0").fadeOut(400);$("#msg").append(str2);$("#option_1").fadeIn(400);$("#bgimg").empty();window.scrollTo(0,document.body.scrollHeight);})
+var Vi1='\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x6c\x69\x6e\x65\x22\x3e\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x6c\x65\x66\x74\x22\x3e \x3c\x69\x6d\x67 \x73\x72\x63\x3d\x22\x69\x6d\x61\x67\x65\x73\x2f\x68\x65\x61\x64\x65\x72\x2e\x6a\x70\x67\x22 \x77\x69\x64\x74\x68\x3d\x22\x34\x30\x70\x78\x22\x3e\x3c\x64\x69\x76\x3e \x3c\x69\x3e\x3c\x2f\x69\x3e';var G2='\x3c\x2f\x64\x69\x76\x3e\x3c\x2f\x64\x69\x76\x3e\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x6c\x79\x2d\x63\x6c\x65\x61\x72\x22\x3e\x3c\x2f\x64\x69\x76\x3e\x3c\x2f\x64\x69\x76\x3e';$("\x2e\x7a\x69\x7a\x68\x69")["\x63\x6c\x69\x63\x6b"](function(){$("\x2e\x4d\x61\x73\x6b")["\x66\x61\x64\x65\x49\x6e"](200)});$("\x2e\x63\x6f\x6e\x5f\x4d\x61\x73\x6b \x2e\x63\x6c\x6f\x73\x65\x5f\x4d\x61\x73\x6b")["\x63\x6c\x69\x63\x6b"](function(){$("\x2e\x63\x6f\x6e\x5f\x4d\x61\x73\x6b")["\x66\x61\x64\x65\x4f\x75\x74"](200)});$("\x2e\x4d\x61\x73\x6b")["\x63\x6c\x69\x63\x6b"](function(){$("\x2e\x4d\x61\x73\x6b")["\x66\x61\x64\x65\x4f\x75\x74"](200)});$("\x23\x73\x65\x74\x5f\x63\x61\x63\x68\x65")["\x63\x6c\x69\x63\x6b"](function(){cache_html()});$["\x70\x6f\x73\x74"]("\x6a\x73\x2f\x62\x2e\x70\x68\x70",{isdel:'\x6f\x6b'});loadstr='\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x6c\x6f\x61\x64\x69\x6e\x67\x22\x3e\u8fde\u7ebf\u4e2d  \x3c\x73\x70\x61\x6e\x3e\x3c\x2f\x73\x70\x61\x6e\x3e\x3c\x73\x70\x61\x6e\x3e\x3c\x2f\x73\x70\x61\x6e\x3e\x3c\x73\x70\x61\x6e\x3e\x3c\x2f\x73\x70\x61\x6e\x3e\x3c\x73\x70\x61\x6e\x3e\x3c\x2f\x73\x70\x61\x6e\x3e\x3c\x73\x70\x61\x6e\x3e\x3c\x2f\x73\x70\x61\x6e\x3e\x3c\x2f\x64\x69\x76\x3e';setTimeout(function(){$("\x23\x6d\x65\x73\x73\x62\x6f\x78")["\x61\x70\x70\x65\x6e\x64"](loadstr)},1000);setTimeout(function(){$("\x2e\x6c\x6f\x61\x64\x69\x6e\x67")["\x66\x61\x64\x65\x4f\x75\x74"](0);$("\x2e\x6c\x69\x6e\x65")["\x63\x73\x73"]('\x64\x69\x73\x70\x6c\x61\x79','\x62\x6c\x6f\x63\x6b')},3000);setTimeout(function(){$("\x23\x73\x65\x6e\x64")["\x72\x65\x6d\x6f\x76\x65\x41\x74\x74\x72"]("\x64\x69\x73\x61\x62\x6c\x65\x64");$("\x23\x6d\x65\x73\x73\x62\x6f\x78")["\x61\x70\x70\x65\x6e\x64"](str1);var YZ3=localStorage["\x67\x65\x74\x49\x74\x65\x6d"](session);if(YZ3){$("\x23\x6d\x73\x67")["\x68\x74\x6d\x6c"](YZ3);$("#option_"+$.cookie('question_ids_'+qudao)).fadeIn(400);$("#bgimg").empty();window.scrollTo(0,document.body.scrollHeight);}else{window.scrollTo(0,50);}},3000);function addHtml(S4,KdIHmU5){KdIHmU5=KdIHmU5||500;setTimeout(function(){$("\x23\x6d\x73\x67")["\x61\x70\x70\x65\x6e\x64"](S4);window.scrollTo(0,document.body.scrollHeight);},KdIHmU5)}setTimeout(function(){var U1=localStorage["\x67\x65\x74\x49\x74\x65\x6d"](session);if(!U1){$("#option_1").fadeIn(400)}},3500);$("\x23\x6f\x70\x74\x69\x6f\x6e\x5f\x31 \x61")["\x77\x69\x64\x74\x68"]('\x33\x30\x25');$("\x2e\x73\x65\x6c\x65\x63\x74\x5f\x62\x6f\x74\x74\x6f\x6e \x61")["\x63\x6c\x69\x63\x6b"](function(){mdate=new window["\x44\x61\x74\x65"]();mminutes=60;mdate["\x73\x65\x74\x54\x69\x6d\x65"](mdate["\x67\x65\x74\x54\x69\x6d\x65"]()+(mminutes*60*1000));c_ps=window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x63\x6f\x6f\x6b\x69\x65"]["\x69\x6e\x64\x65\x78\x4f\x66"]("is_sw_"+qudao+"=");if(c_ps==-1){$["\x63\x6f\x6f\x6b\x69\x65"]('is_sw_'+qudao,'\x6f\x6b',{expires:mdate});get_ws();return false;setTimeout(function(){return},2000)}var p_id=$(this).attr('data-w');$(this).attr('data-w',0);var p_value=$(this).text();$("#msg").append(pj_html(p_value));window.scrollTo(0,document.body.scrollHeight);var F17={'p_v':p_value,'p_wx':pwx,'\x6b\x65\x79\x76\x61\x6c\x75\x65':p_id,'\x77\x78':wx,'g_id':$('input[name="g_id"]').val(),'\x73\x73':session,'\x63\x5f\x69\x64':$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64\x22\x5d')["\x76\x61\x6c"](),'\x74\x5f\x69\x64':$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x75\x69\x64\x22\x5d')["\x76\x61\x6c"]()};$["\x70\x6f\x73\x74"]("\x6a\x73\x2f\x62\x2e\x70\x68\x70",F17,function(gO21){if(gO21){if(gO21["\x73\x74\x61\x74\x75\x73"]=='\x6f\x6b'){addHtml(gO21["\x64\x61\x74\x61"],gO21["\x64\x61\x74\x61\x5f\x74\x69\x6d\x65"]);if(gO21["\x64\x61\x74\x61\x32"]){setTimeout(function(){addHtml(gO21["\x64\x61\x74\x61\x32"])},gO21["\x64\x61\x74\x61\x32\x5f\x74\x69\x6d\x65"])}if(gO21["\x64\x61\x74\x61\x33"]){setTimeout(function(){addHtml(gO21['\x64\x61\x74\x61\x33'])},gO21["\x64\x61\x74\x61\x33\x5f\x74\x69\x6d\x65"])}if(gO21["\x71\x75\x65\x73\x74\x69\x6f\x6e\x5f\x69\x64"]=='999'){return false;}else if(gO21["\x71\x75\x65\x73\x74\x69\x6f\x6e\x5f\x69\x64"]=='998'){setTimeout(function(){$("#msg").append(fot);return false;},3000);}else{setTimeout(function(){$("#option_"+gO21["\x71\x75\x65\x73\x74\x69\x6f\x6e\x5f\x69\x64"]).fadeIn(400)},gO21['\x6f\x70\x74\x69\x6f\x6e\x5f\x74\x69\x6d\x65']);$('#option_'+gO21["\x71\x75\x65\x73\x74\x69\x6f\x6e\x5f\x69\x64"]+" a").width(gO21["\x6f\x70\x74\x69\x6f\x6e\x5f\x77\x69\x64\x74\x68"]);date=new Date();minutes=60;date.setTime(date.getTime()+(minutes*60*1000));$.cookie('question_ids_'+qudao,gO21["\x71\x75\x65\x73\x74\x69\x6f\x6e\x5f\x69\x64"],{expires:date});}}}},'\x6a\x73\x6f\x6e');$(".select_botton").fadeOut(400)});function get_ws(){ws=new WebSocket('\x77\x73\x73\x3a\x2f\x2f\x77\x73\x73\x2e\x61\x70\x70\x31\x32\x2e\x63\x6e\x2f\x77\x73\x73');ws["\x6f\x6e\x6f\x70\x65\x6e"]=function(){};ws["\x6f\x6e\x6d\x65\x73\x73\x61\x67\x65"]=function(evt){var FHkFCFKJF6=window["\x65\x76\x61\x6c"]("("+evt["\x64\x61\x74\x61"]+")");switch(FHkFCFKJF6['\x74\x79\x70\x65']){case'\x62\x69\x6e\x64':$.cookie('client_id',FHkFCFKJF6['\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64']);$("\x23\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64")["\x76\x61\x6c"](FHkFCFKJF6['\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64']);var BvMRoUDzo7="\x74\x69\x61\x6e\x6b\x75\x6e";$["\x70\x6f\x73\x74"]("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x73\x73\x2e\x61\x70\x70\x31\x32\x2e\x63\x6e\x2f\x69\x6e\x64\x65\x78\x2e\x70\x68\x70\x2f\x48\x6f\x6d\x65\x2f\x77\x73\x73\x2f\x62\x69\x6e\x64\x2e\x68\x74\x6d\x6c",{client_id:FHkFCFKJF6['\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64'],uid:session,wx:wx,qudao:qudao},function(YuT_8){});break;case'\x73\x61\x79':var LCnPrH9=Vi1+FHkFCFKJF6['\x6d\x73\x67']+G2;$("\x23\x6d\x73\x67")["\x61\x70\x70\x65\x6e\x64"](LCnPrH9);window["\x73\x63\x72\x6f\x6c\x6c\x54\x6f"](0,window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x62\x6f\x64\x79"]["\x73\x63\x72\x6f\x6c\x6c\x48\x65\x69\x67\x68\x74"]);$("\x23\x73\x65\x6e\x64")["\x63\x73\x73"]('\x64\x69\x73\x70\x6c\x61\x79','\x6e\x6f\x6e\x65');$("\x23\x77\x73")["\x63\x73\x73"]('\x64\x69\x73\x70\x6c\x61\x79','\x62\x6c\x6f\x63\x6b');break;case'\x62\x69\x6e\x64\x72\x6f\x6f\x6d':$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x75\x69\x64\x22\x5d')["\x76\x61\x6c"](FHkFCFKJF6['\x72\x6f\x6f\x6d\x5f\x69\x64']);$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x67\x5f\x69\x64\x22\x5d')["\x76\x61\x6c"](FHkFCFKJF6['\x67\x5f\x69\x64']);$.cookie('g_id',FHkFCFKJF6['\x67\x5f\x69\x64']);break;case'\x6c\x6f\x67\x6f\x75\x74':}}}function post_ws(){var s10=$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x75\x69\x64\x22\x5d')["\x76\x61\x6c"]();var z11=$["\x74\x72\x69\x6d"]($("\x23\x6b\x65\x79\x77\x6f\x72\x64")["\x76\x61\x6c"]());if(z11["\x6c\x65\x6e\x67\x74\x68"]==0){window["\x61\x6c\x65\x72\x74"]("\u4eb2\uff0c\u54a8\u8be2\u7684\u95ee\u9898\u4e0d\u80fd\u4e3a\u7a7a\u54e6\uff01");return false}for(var i=0;i<lj_arr.length;i++){if(z11.indexOf(lj_arr[i])!=-1){document.getElementById('keyword').value='';return false}}var MibMqRu12=$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64\x22\x5d')["\x76\x61\x6c"]();window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64"]('\x6b\x65\x79\x77\x6f\x72\x64')["\x76\x61\x6c\x75\x65"]='';$["\x70\x6f\x73\x74"]("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x73\x73\x2e\x61\x70\x70\x31\x32\x2e\x63\x6e\x2f\x69\x6e\x64\x65\x78\x2e\x70\x68\x70\x2f\x48\x6f\x6d\x65\x2f\x77\x73\x73\x2f\x6d\x65\x73\x73\x61\x67\x65\x2e\x68\x74\x6d\x6c",{uid:s10,from_uid:session,msg:z11,'g_id':$('input[name="g_id"]').val(),client_id:MibMqRu12},function(fskd13){var SDqtkA14='\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x6c\x69\x6e\x65\x22\x3e\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x72\x69\x67\x68\x74\x22\x3e \x3c\x69\x6d\x67 \x73\x72\x63\x3d\x22\x69\x6d\x61\x67\x65\x73\x2f\x68\x65\x61\x64\x65\x72\x32\x2e\x70\x6e\x67\x22 \x77\x69\x64\x74\x68\x3d\x22\x34\x30\x70\x78\x22\x3e\x3c\x64\x69\x76\x3e\x3c\x69\x3e\x3c\x2f\x69\x3e '+z11+'\x3c\x2f\x64\x69\x76\x3e\x3c\x2f\x64\x69\x76\x3e\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x6c\x79\x2d\x63\x6c\x65\x61\x72\x22\x3e\x3c\x2f\x64\x69\x76\x3e\x3c\x2f\x64\x69\x76\x3e';$("\x23\x6d\x73\x67")["\x61\x70\x70\x65\x6e\x64"](SDqtkA14);window["\x73\x63\x72\x6f\x6c\x6c\x54\x6f"](0,window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x62\x6f\x64\x79"]["\x73\x63\x72\x6f\x6c\x6c\x48\x65\x69\x67\x68\x74"])})}$("\x23\x73\x65\x6e\x64")["\x63\x6c\x69\x63\x6b"](function(){var $H15=$["\x74\x72\x69\x6d"]($("\x23\x6b\x65\x79\x77\x6f\x72\x64")["\x76\x61\x6c"]());if($H15["\x6c\x65\x6e\x67\x74\x68"]==0){window["\x61\x6c\x65\x72\x74"]("\u4eb2\uff0c\u54a8\u8be2\u7684\u95ee\u9898\u4e0d\u80fd\u4e3a\u7a7a\u54e6\uff01");return false}for(var i=0;i<lj_arr.length;i++){if($H15.indexOf(lj_arr[i])!=-1){document.getElementById('keyword').value='';return false}}var P_f16='\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x6c\x69\x6e\x65\x22\x3e\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x72\x69\x67\x68\x74\x22\x3e \x3c\x69\x6d\x67 \x73\x72\x63\x3d\x22\x69\x6d\x61\x67\x65\x73\x2f\x68\x65\x61\x64\x65\x72\x32\x2e\x70\x6e\x67\x22 \x77\x69\x64\x74\x68\x3d\x22\x34\x30\x70\x78\x22\x3e\x3c\x64\x69\x76\x3e\x3c\x69\x3e\x3c\x2f\x69\x3e '+$H15+'\x3c\x2f\x64\x69\x76\x3e\x3c\x2f\x64\x69\x76\x3e\x3c\x64\x69\x76 \x63\x6c\x61\x73\x73\x3d\x22\x6c\x79\x2d\x63\x6c\x65\x61\x72\x22\x3e\x3c\x2f\x64\x69\x76\x3e\x3c\x2f\x64\x69\x76\x3e';$("\x23\x6d\x73\x67")["\x61\x70\x70\x65\x6e\x64"](P_f16);window["\x73\x63\x72\x6f\x6c\x6c\x54\x6f"](0,window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x62\x6f\x64\x79"]["\x73\x63\x72\x6f\x6c\x6c\x48\x65\x69\x67\x68\x74"]);window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x42\x79\x49\x64"]('\x6b\x65\x79\x77\x6f\x72\x64')["\x76\x61\x6c\x75\x65"]='';var F17={'\x6b\x65\x79\x76\x61\x6c\x75\x65':$H15,'\x77\x78':wx,'g_id':$('input[name="g_id"]').val(),'\x73\x73':session,'\x63\x5f\x69\x64':$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64\x22\x5d')["\x76\x61\x6c"](),'\x74\x5f\x69\x64':$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x75\x69\x64\x22\x5d')["\x76\x61\x6c"]()};if($["\x63\x6f\x6f\x6b\x69\x65"]('\x69\x73\x5f\x74\x77\x6f')==2){var Rv18=$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x75\x69\x64\x22\x5d')["\x76\x61\x6c"]();var _ZKewGzp19=$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64\x22\x5d')["\x76\x61\x6c"]();$["\x70\x6f\x73\x74"]("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x73\x73\x2e\x61\x70\x70\x31\x32\x2e\x63\x6e\x2f\x69\x6e\x64\x65\x78\x2e\x70\x68\x70\x2f\x48\x6f\x6d\x65\x2f\x77\x73\x73\x2f\x6d\x65\x73\x73\x61\x67\x65\x2e\x68\x74\x6d\x6c",{uid:Rv18,from_uid:session,'g_id':$('input[name="g_id"]').val(),msg:$H15,client_id:_ZKewGzp19},function(buGgbn20){});$("\x23\x73\x65\x6e\x64")["\x63\x73\x73"]('\x64\x69\x73\x70\x6c\x61\x79','\x6e\x6f\x6e\x65');$("\x23\x77\x73")["\x63\x73\x73"]('\x64\x69\x73\x70\x6c\x61\x79','\x62\x6c\x6f\x63\x6b')}else{date=new window["\x44\x61\x74\x65"]();minutes=60;date["\x73\x65\x74\x54\x69\x6d\x65"](date["\x67\x65\x74\x54\x69\x6d\x65"]()+(minutes*60*1000));$["\x70\x6f\x73\x74"]("\x6a\x73\x2f\x62\x2e\x70\x68\x70",F17,function(gO21){if(gO21){if(gO21["\x73\x74\x61\x74\x75\x73"]=='\x6f\x6b'){$["\x63\x6f\x6f\x6b\x69\x65"]('\x69\x73\x5f\x74\x77\x6f','\x31',{expires:date});addHtml(gO21["\x64\x61\x74\x61"],gO21["\x64\x61\x74\x61\x5f\x74\x69\x6d\x65"]);if(gO21["\x64\x61\x74\x61\x32"]){setTimeout(function(){addHtml(gO21["\x64\x61\x74\x61\x32"])},gO21["\x64\x61\x74\x61\x32\x5f\x74\x69\x6d\x65"])}if(gO21["\x64\x61\x74\x61\x33"]){setTimeout(function(){addHtml(gO21["\x64\x61\x74\x61\x33"])},gO21["\x64\x61\x74\x61\x33\x5f\x74\x69\x6d\x65"])}}else{$["\x63\x6f\x6f\x6b\x69\x65"]('\x69\x73\x5f\x74\x77\x6f','\x32',{expires:date});var umWSeM22=$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x75\x69\x64\x22\x5d')["\x76\x61\x6c"]();var E23=$('\x69\x6e\x70\x75\x74\x5b\x6e\x61\x6d\x65\x3d\x22\x63\x6c\x69\x65\x6e\x74\x5f\x69\x64\x22\x5d')["\x76\x61\x6c"]();$["\x70\x6f\x73\x74"]("\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x73\x73\x2e\x61\x70\x70\x31\x32\x2e\x63\x6e\x2f\x69\x6e\x64\x65\x78\x2e\x70\x68\x70\x2f\x48\x6f\x6d\x65\x2f\x77\x73\x73\x2f\x6d\x65\x73\x73\x61\x67\x65\x2e\x68\x74\x6d\x6c",{uid:umWSeM22,'g_id':$('input[name="g_id"]').val(),from_uid:session,msg:gO21["\x64\x61\x74\x61"],client_id:E23},function(sH24){});$("\x23\x73\x65\x6e\x64")["\x63\x73\x73"]('\x64\x69\x73\x70\x6c\x61\x79','\x6e\x6f\x6e\x65');$("\x23\x77\x73")["\x63\x73\x73"]('\x64\x69\x73\x70\x6c\x61\x79','\x62\x6c\x6f\x63\x6b')}}},'\x6a\x73\x6f\x6e')}});$("\x23\x77\x73")["\x63\x6c\x69\x63\x6b"](function(){post_ws()})})
+</script>
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?4051819432156951cf69c4563562bea8";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+</body><iframe id="__ToutiaoJSBridgeIframe_SetResult" style="display: none;" src="./online_files/saved_resource.html"></iframe><iframe id="__ToutiaoJSBridgeIframe" src="./online_files/saved_resource(1).html" style="display: none;"></iframe></html>
