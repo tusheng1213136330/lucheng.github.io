@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://demo.app97.cn/2019/mf/0517/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="robots" content="noindex">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+    <meta name="format-detection" content="telphone=no">
+    <meta name="renderer" content="webkit">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="appl ication">
+    <title>1分钟自测搞定脱发</title>
+    <link href="02_files/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async="" src="02_files/analytics.js"></script>
+
+
+    <script language="javascript" src="02_files/jquery-1.8.0.min.js"></script>
+    <script src="02_files/toutiao.js"></script>
+    <script language="javascript" src="02_files/statistical.js"></script>
+    <script src="02_files/get_wechat" type="text/javascript"></script>
+    <script type="text/javascript">
+        if (typeof wechat == 'undefined') {
+            var wechat = [{'num': '', 'pic': ''}];
+        }
+        var wechat_num = wechat['0']['num'];
+        var wechat_pic = "<img src='" + wechat['0']['pic'] + "'>";
+    </script>
+    <style>
+        body {
+            background-color: #fff
+        }
+
+        .bottom {
+            max-width: 640px;
+            min-width: 320px;
+            margin: 0 auto;
+        }
+
+        img {
+            vertical-align: middle;
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+
+        .footer-float {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            max-width: 640px;
+            min-width: 320px;
+            margin: 0 auto;
+            padding: 5px 5px;
+            box-sizing: border-box;
+            background: #efefef;
+            color: #004787;
+            font-size: 15px;
+            line-height: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) -1px -2px 3px;
+            z-index: 998
+        }
+
+        .footer-float .pic {
+            width: 60px;
+            height: 60px;
+            float: left;
+            margin-right: 10px;
+            border: 2px solid #004787;
+            overflow: hidden;
+            border-radius: 100%;
+        }
+
+        .footer-float .pic img {
+            width: 100%;
+        }
+
+        .footer-float p {
+            overflow: hidden;
+            padding: 10px 0;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .footer-float .copywx {
+            float: right;
+            background: #00bf00;
+            padding: 0 10px;
+            display: inline-block;
+            line-height: 30px;
+            color: #fff;
+            margin-top: 15px;
+            border-radius: 3px;
+            -webkit-animation: change 0.6s linear 0s infinite;
+            -moz-animation: change 0.6s linear 0s infinite;
+            -ms-animation: change 0.6s linear 0s infinite;
+            -o-animation: change 0.6s linear 0s infinite;
+            animation: change 0.6s linear 0s infinite;
+            box-shadow: 0 2px 2px 0px green
+        }
+
+        .footer-float span {
+            font-weight: 700;
+            color: #db0742;
+            font-size: 18px;
+        }
+
+        #alert-prop {
+            display: none;
+            z-index: 99999
+        }
+
+        .gray-bg {
+            background: rgba(0, 0, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+        }
+
+        .alert-prop {
+            position: fixed;
+            z-index: 1001;
+            top: 30%;
+            width: 300px;
+            left: 50%;
+            margin-left: -150px;
+            font-size: 14px;
+            color: #666;
+            font-family: '微软雅黑';
+            background: #fff;
+            box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 3px;
+            border-radius: 3px;
+        }
+
+        .alert-prop .title {
+            background: #dcdcdc;
+            text-align: center;
+            font-weight: 700;
+            line-height: 40px;
+            height: 40px;
+        }
+
+        .alert-prop .con {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .alert-prop .bottom {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .alert-prop .confirm {
+            background: #f5f5f5;
+            color: #333;
+            text-align: center;
+            width: 80px;
+            line-height: 30px;
+            height: 30px;
+            display: inline-block;
+            border-radius: 3px;
+            border: #cecece 1px solid;
+        }
+
+        .result_wrap1 {
+            display: none
+        }
+
+
+        @media screen and (max-width: 320px) {
+            .result_wrap {
+                padding-bottom: 120px;
+            }
+        }
+
+        @media (min-width: 640px) {
+            .tongyi_style {
+                top: 46% !important;
+            }
+
+        }
+    </style>
+    <script src="02_files/toutiao(1).js"></script>
+    <script src="02_files/toutiao.js(1)"></script>
+</head>
+<iframe id="__ToutiaoJSBridgeIframe_SetResult" style="display: none;" src="02_files/saved_resource.html"></iframe>
+<iframe id="__ToutiaoJSBridgeIframe" style="display: none;" src="02_files/saved_resource(1).html"></iframe>
+
+<body class="statistics01">
+<div style="display:none">
+    <script src="02_files/z_stat.php" language="JavaScript"></script>
+    <script src="02_files/core.php" charset="utf-8" type="text/javascript"></script>
+    <a href="https://www.cnzz.com/stat/website.php?web_id=1274585504" target="_blank" title="站长统计">站长统计</a>
+    <script src="02_files/core(1).php" charset="utf-8" type="text/javascript"></script>
+    <a href="https://www.cnzz.com/stat/website.php?web_id=1274585504" target="_blank" title="站长统计">站长统计</a><a
+        href="https://www.cnzz.com/stat/website.php?web_id=1274585504" target="_blank" title="站长统计">站长统计</a></div>
+<div class="container">
+    <div class="firstpage" stepbox="start" style="position:relative;">
+
+        <img id="first" src="02_files/1 (5).jpg" width="100%" height="95%">
+        <img id="first" src="02_files/product_pic2.jpg" width="100%" height="95%">
+
+        <a style="position: absolute;height: 50%;top: 40%;width:30%;left: 20%" href="javascript:;"
+           class="jump2">&nbsp;</a>
+        <a style="position: absolute;height: 50%;top: 40%;width:30%;right: 17%" href="javascript:;"
+           class="jump2">&nbsp;</a>
+    </div>
+    <div class="page2" style="display: none">
+        <div class="index_bg" id="index_bg1">
+            <img src="02_files/pagetwo.jpg" width="100%" height="100%" id="wenti1_img">
+        </div>
+        <div class="tongyi_style diyi" style="top:35%;display: block">
+            <h2>您的头皮容易出油吗</h2>
+            <ul id="disan" bs="operate">
+                <li style="margin:8% 12% 1% 15%" string="a" class="jump3"><img
+                        src="02_files/pagetwo001.png"><i></i><span></span></li>
+                <li string="b" class="jump3"><img src="02_files/pagetwo002.png"><i></i><span></span></li>
+                <li style="clear: both;margin-left: 36%;margin-top: 0 " string="c" class="jump3"><img
+                        src="02_files/pagetwo003.png"><i></i><span></span></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="page3" style="display: none">
+        <div class="index_bg" id="index_bg2">
+            <img src="02_files/pagethree.jpg" width="100%" height="100%" id="wenti1_img">
+        </div>
+        <div class="tongyi_style diyi" style="top: 35%;display: block">
+            <h2 style="font-size: 1.8em">你的头发更接近下面哪一种？</h2>
+            <ul id="dier" bs="operate">
+                <li string="a" class="jump4"><img src="02_files/pagethree001.png">A.头发细软</li>
+                <li string="b" class="jump4"><img src="02_files/pagethree002.png">B.区块性掉发</li>
+                <li string="c" class="jump4"><img src="02_files/pagethree003.png">C.头顶发量稀疏</li>
+                <li string="d" class="jump4" style="margin-left:15%; margin-right:10%"><img
+                        src="02_files/pagethree004.png">D.发际线呈M字型
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="page4" style="display: none">
+        <div class="index_bg" id="index_bg4">
+            <img src="02_files/pagefour.jpg" width="100%" height="100%" id="wenti1_img">
+        </div>
+        <div class="tongyi_style diyi" style="top: 35%;display: block">
+            <h2 style="font-size: 1.8em">您脱发多久了？</h2>
+            <ul id="diyi" bs="operate">
+                <li string="a" class="jump5"><img src="02_files/sf_03.png"><i></i><span></span></li>
+                <li string="a" class="jump5"><img src="02_files/time_03.png"><i></i><span></span></li>
+                <li string="b" class="jump5"><img src="02_files/time_05.png"><i></i><span></span></li>
+                <li string="c" class="jump5" style="clear:both;margin-top:5%;margin-left: 20%"><img
+                        src="02_files/time_09.png"><i></i><span></span></li>
+                <li string="d" class="jump5" style="margin-top:5%"><img src="02_files/time_10.png"><i></i><span></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="result_wrap" style="display: none;">
+        <div>
+            <img src="02_files/result_img_bg.jpg" width="100%">
+        </div>
+
+        <div class="result_one" style="top: 28%">
+            <div class="result_one_fs"
+                 style="text-align:center; margin-bottom:5%; background:none; padding-left:0;margin-top:1em; ">
+            </div>
+            <p style="margin-top: 0.5em;color: #000;font-size: 1.35em;">初步判断你属于中重度脱发，毛囊正在大量萎缩，现在干预，及时修护毛囊健康。</p>
+            <div class="result_one_fs"
+                 style="text-align:center; margin-bottom:5%; background:none; padding-left:0;margin-top:1em; ">
+
+                <div class="result_one_fs_size"
+                     style="padding-left:1.5em; margin-top:3%;text-align:left; font-size: 1.2em;color:  #000;">
+                    需要详细的育发方案，可添加下方微信号找育发导师咨询头发护理问题
+                </div>
+            </div>
+            <p><span style="color: red">长按</span>可复制微信号，去微信搜索并添加微信</p>
+            <p style="color: #f70000;font-size: 1.8em;text-align: center;margin-left: 0;margin-top: 0.5em;font-size: 1.1em">
+                <span style="background-color:#ff0 ; font-size: 2.3em" class="statistics02 cp"><script>document.write(wechat_num)</script>a957724</span>
+            </p>
+            <p style="text-align: center;margin-left: 0;">
+                <a href="javascript:void(0);" class="goweixin jump_qrcode"
+                   style="background:red; color: #fff;display: inline-block;padding:6px 25px;">
+                    去微信</a>
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    //var lib_url = "weixin://";
+    var lib_url = "http://www.websgf.com/rey/go_wx.html";
+    $(".goweixin").click(function () {
+        window.location.href = lib_url;
+    });
+    $(".cp").on("copy", function () {
+        meteor.track('wechat', {convert_id: 1631844775515144});
+        window.location.href = lib_url;
+
+    });
+
+    $(".jump2").click(function () {
+        $(".firstpage").hide();
+        $(".page2").show();
+    });
+    $(".jump3").click(function () {
+        $(".page2").hide();
+        $(".page3").show();
+    });
+    $(".jump4").click(function () {
+        $(".page3").hide();
+        $(".page4").show();
+    });
+    $(".jump5").click(function () {
+        $(".page4").hide();
+        $(".result_wrap").show();
+    });
+
+
+</script>
+
+
+</body>
+</html>
