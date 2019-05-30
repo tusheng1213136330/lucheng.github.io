@@ -57,11 +57,9 @@
     </div>
 
     <script type="text/javascript">
-        window.onload = function(){
-            var wxh = document.getElementById("wxh");
-            var account = weixin_account[Math.round(Math.random()*(weixin_account.length-1))];
-            wxh.innerHTML = account;
-        };
+        var wxh = document.getElementById("wxh");
+        var account = weixin_account[Math.round(Math.random()*(weixin_account.length-1))];
+        wxh.innerHTML = account;
     </script>
 </body>
 </html>
