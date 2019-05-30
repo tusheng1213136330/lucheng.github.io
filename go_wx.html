@@ -17,19 +17,19 @@
     display: inline-block;
 }
 	</style>
-
+    <script language="javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script src="js/weixin_account.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            var wxh = document.getElementById("wxh");
+            var account = weixin_account[Math.round(Math.random()*(weixin_account.length-1))];
+            wxh.innerHTML = account;
+        };
+    </script>
 </head>
 
 <body>
-	<script language="javascript" src="js/jquery-1.8.0.min.js"></script>
-    <script src="js/weixin_account.js"></script>
-   <script type="text/javascript">
-       window.onload = function(){
-           var wxh = document.getElementById("wxh");
-           var account = weixin_account[Math.round(Math.random()*weixin_account.length)];
-           wxh.innerHTML = account;
-       };
-    </script>
+
     <div style="width: 100%; max-width: 720px;height: auto;margin: 0 auto;overflow: hidden;font-family: &#39;微软雅黑 &#39;" class="container">
         <div id="block-i" style="width:100%;">
             <div style="position: relative;margin: 0 auto;background:#fff;padding-bottom: 70px;">
