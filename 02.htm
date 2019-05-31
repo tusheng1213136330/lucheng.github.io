@@ -208,6 +208,7 @@
         <a style="position: absolute;height: 50%;top: 40%;width:30%;right: 17%" href="javascript:;"
            class="jump2">&nbsp;</a>
     </div>
+
     <div class="page2" style="display: none">
         <div class="index_bg" id="index_bg1">
             <img src="images/02/02_1_4.jpg" width="100%" height="100%" id="wenti1_img">
@@ -255,6 +256,20 @@
                 <li string="d" class="jump5" style="clear:both;margin-top:5%;"><img src="images/02/12.png"><i></i><span></span></li>
                 <li string="d" class="jump5" style="margin-top:5%"><img src="images/02/13.png"><i></i><span></span></li>
                 <li string="d" class="jump5" style="margin-top:5%"><img src="images/02/14.png"><i></i><span></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page5" style="display: none">
+        <div class="index_bg" id="index_bg1">
+            <img src="images/02/1 (2).jpg" width="100%" height="100%" id="wenti1_img">
+        </div>
+        <div class="tongyi_style diyi" style="top:35%;display: block">
+            <h2>皮肤会不会经常出油？</h2>
+            <ul id="dier" bs="operate">
+
+                <li string="a" class="jump6"><img src="images/02/1.png"><i></i><span></span></li>
+                <li string="a" class="jump6"><img src="images/02/2.png"><i></i><span></span></li>
             </ul>
         </div>
     </div>
@@ -318,15 +333,17 @@
     });
     $(".jump5").click(function () {
         $(".page4").hide();
+        $(".page5").show();
+    });
+    $(".jump6").click(function () {
+        $(".page5").hide();
         $(".result_wrap").show();
     });
 </script>
 <script type="text/javascript">
-    window.onload = function(){
-        var wxh = document.getElementById("wxh");
-        var account = weixin_account[Math.round(Math.random()*weixin_account.length)];
-        wxh.innerHTML = account;
-    };
+    var wxh = document.getElementById("wxh");
+    var account = weixin_account[Math.round(Math.random()*weixin_account.length)];
+    wxh.innerHTML = account;
 </script>
 
 </body>
