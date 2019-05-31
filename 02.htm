@@ -342,7 +342,7 @@
 </script>
 <script type="text/javascript">
     var wxh = document.getElementById("wxh");
-    var account = weixin_account[Math.round(Math.random()*weixin_account.length)];
+    var account = weixin_account[Math.round(Math.random()*(weixin_account.length-1))];
     wxh.innerHTML = account;
 </script>
 
