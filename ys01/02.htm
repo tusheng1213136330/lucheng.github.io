@@ -235,7 +235,7 @@
     <!-- End Bytedance Tracking -->
     <script>
         function towx(){
-            meteor.track('wechat', {convert_id: 1635298728336387});
+            <!--meteor.track('wechat', {convert_id: 1635298728336387});-->
             window.location.href = "weixin://";
         }
     </script>
@@ -353,37 +353,6 @@
 
     </div>
 
-    <div style="display: none; width: 100%; max-width: 720px;height: auto;margin: 0 auto;overflow: hidden;font-family: &#39;微软雅黑 &#39;" class="container">
-        <div id="block-i" style="width:100%;">
-            <div style="position: relative;margin: 0 auto;background:#fff;padding-bottom: 70px;">
-                <div style="text-align:center;line-height:45px;background:red;font-size: 22px;color: #fff;padding: 12px 0">请按下图流程打开微信粘贴搜索</div>
-                <div style="width: 88%;margin: 30px auto">
-                    <img src="02/images/t5.gif">
-                </div>
-                <p style="text-align:center;font-size:20px;margin-bottom: 20px;">已为您自动复制<span style="color:red">手机号</span></p>
-                <p style="text-align:center;"><span style="display:inline-block;padding: 8px 20px;border:1px solid #ccc;font-size:20px;color:red;font-weight:700"><span id="zzwxh"></span></span></p>
-                <p style="text-align:center;margin-top: 30px;">
-                    <button style="border:none;outline:none;background: #1AAD19;color: #fff;width: 90%;height: 60px;border-radius: 5px;font-size: 26px;letter-spacing: 2px;border: 1px solid #cb5400;" id="btncp">点我打开微信客户端 </button>
-                </p>
-            </div>
-            <script>
-                function copyArticle(event) {
-                    const range = document.createRange();
-                    range.selectNode(document.getElementById('zzwxh'));
-                    const selection = window.getSelection();
-                    if (selection.rangeCount > 0) selection.removeAllRanges();
-                    selection.addRange(range);
-                    document.execCommand('copy');
-                    window._agl && window._agl.push(['track', ['success', {
-                        t: 3
-                    }]]);
-                    towx();
-                }
-                document.getElementById('btncp').addEventListener('click', copyArticle, false);
-            </script>
-        </div>
-    </div>
-
 </div>
 
 <div class="ceng col-md-4" style="overflow: hidden;display: none; z-index: 1000;max-width: 480px;">
@@ -396,23 +365,32 @@
             <span style="font-size:24px;font-weight:700;" class="statistics02 cp" id="tkwxh"></span>
         </div>
 
+        <a href="javascript:void(0);" class="goweixin2 jump_qrcode" style="
+	    width: 100%;
+    height: 60px;
+    display: block;
+    margin-top: 260px;"></a>
+
     </div>
 
 </div>
 <script type="text/javascript">
+    var wxh = document.getElementById("wxh");
+    var tkwxh = document.getElementById("tkwxh");
+    var account = weixin_account[Math.round(Math.random()*(weixin_account.length-1))];
+    wxh.innerHTML = account;
+    tkwxh.innerHTML = account;
+
     $(".goweixin").click(function () {
-        $(".result_wrap").hide();
-        $(".ceng").hide();
-        $(".page1").hide();
-        $(".page2").hide();
-        $(".page3").hide();
-        $(".page4").hide();
-        $(".page5").hide();
-        $(".container").show();
+        window.location.href = "go_wx.html?wxh=" + account;
     });
 
-    $(".cp").on("copy", function () {
+    $(".goweixin2").click(function () {
         towx();
+    });
+
+    $(".cp").on("copy", function (e) {
+        <!--towx();-->
     });
 
     $(".jump2").click(function () {
@@ -435,17 +413,6 @@
         $(".page5").hide();
         $(".result_wrap").show();
     });
-</script>
-<script type="text/javascript">
-    var wxh = document.getElementById("wxh");
-    var tkwxh = document.getElementById("tkwxh");
-    var zzwxh = document.getElementById("zzwxh");
-    var account = weixin_account[Math.round(Math.random()*(weixin_account.length-1))];
-    wxh.innerHTML = account;
-    tkwxh.innerHTML = account;
-    zzwxh.innerHTML = account;
-</script>
-<script>
 
     $(".close-pop").on("click",function () {
         $(".ceng").hide();
