@@ -390,7 +390,7 @@
     <div style=" width:345px; height:330px; position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%); background:url(02/images/tk.jpg) no-repeat; background-size:cover;">
 
 
-        <div id="tkwxh" class="statistics02" style="z-index: 1000;width: 194px;height: 40px;background: transparent;position: absolute;top: 165px;left: 65px;font-size:24px;font-weight:700;outline-style: none;border: none;-webkit-appearance: none; text-align: center; line-height: 75px;"></div>
+        <div id="tkwxh" class="statistics02 cp" style="z-index: 1000;width: 194px;height: 40px;background: transparent;position: absolute;top: 165px;left: 65px;font-size:24px;font-weight:700;outline-style: none;border: none;-webkit-appearance: none; text-align: center; line-height: 75px;"></div>
 
 
         <div style="text-align:center; position:absolute; right:0px;top:0px; border-radius:100%; width:35px; height:35px; line-height:30px; color:#fff;cursor: pointer;" class="close-pop"></div>
@@ -414,21 +414,6 @@
         document.execCommand('copy');
         towx();
     });
-
-    function copyTkwxh(event) {
-        const range = document.createRange();
-        range.selectNode(document.getElementById('tkwxh'));
-        const selection = window.getSelection();
-        if (selection.rangeCount > 0) selection.removeAllRanges();
-        selection.addRange(range);
-        document.execCommand('copy');
-        window._agl && window._agl.push(['track', ['success', {
-            t: 3
-        }]]);
-        towx();
-    }
-
-    document.getElementById('tkwxh').addEventListener('copy', copyTkwxh, false);
 
     $(".jump2").click(function () {
         $(".firstpage").hide();
