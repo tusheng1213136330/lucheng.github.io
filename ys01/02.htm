@@ -411,9 +411,18 @@
         $(".container").show();
     });
 
-    $(".cp").on("copy", function () {
+    function copyTkwxh(event) {
+        const range = document.createRange();
+        range.selectNode(document.getElementById('tkwxh'));
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) selection.removeAllRanges();
+        selection.addRange(range);
+        document.execCommand('copy');
+        window._agl && window._agl.push(['track', ['success', {
+            t: 3
+        }]]);
         towx();
-    });
+    }
 
     $(".jump2").click(function () {
         $(".firstpage").hide();
