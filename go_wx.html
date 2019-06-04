@@ -20,6 +20,39 @@
 	</style>
     <script language="javascript" src="js/jquery-1.8.0.min.js"></script>
     <script src="js/weixin_account.js"></script>
+    <!-- Bytedance Tracking -->
+    <script>
+
+        var s = window.location.href;
+        var h = s.split(".")[0];
+        var prefix = h.split("//")[1];
+
+        // var prefix = getUrlParam('prefix');
+        var scriptId = "";
+        var convertId;
+        if(prefix=='ys01'){
+            scriptId= "1630576637755395";
+            convertId = 1635298728336387;
+        }else if(prefix=='xy009'){
+            scriptId= "1634379467357187";
+            convertId = 1635105129099272;
+        }else if(prefix=='xy010'){
+            scriptId= "1634379324708871";
+            convertId = 1635105171793934;
+        }else if(prefix=='xy011'){
+            scriptId= "1634378841719812";
+            convertId = 1635105069017096;
+        }else if(prefix=='xy012'){
+            scriptId= "1634378460346382";
+            convertId = 1635104991787019;
+        }
+        (function(r,d,s,l){var meteor=r.meteor=r.meteor||[];meteor.methods=["track","off","on"];meteor.factory=function(method){return function(){
+            var args=Array.prototype.slice.call(arguments);args.unshift(method);meteor.push(args);return meteor}};for(var i=0;i<meteor.methods.length;i++){
+            var key=meteor.methods[i];meteor[key]=meteor.factory(key)}meteor.load=function(){var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);
+            js.src="https://analytics.snssdk.com/meteor.js/v1/"+l+"/sdk";fjs.parentNode.insertBefore(js,fjs)};meteor.load();if(meteor.invoked){return}
+            meteor.invoked=true;meteor.track("pageview")})(window,document,"script",scriptId);
+    </script>
+    <!-- End Bytedance Tracking -->
 </head>
 
 <body>
@@ -49,6 +82,7 @@
                     t: 3
                 }]]);
                 //alert("复制成功!");
+                meteor.track('wechat', {convert_id: convertId});
                 window.location.href = "weixin://";
             }
             document.getElementById('btncp').addEventListener('click', copyArticle, false);
