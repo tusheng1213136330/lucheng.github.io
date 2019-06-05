@@ -199,28 +199,22 @@
             margin: 0 auto;
             max-width: 750px;
         }
-        .ceng-body{
-            width: 90%;
-            margin: 0 auto;
-            position: relative;
-            margin-top: 45%;
-            background: #fff;
-            border-radius: 20px;
-        }
-        .ceng-content{
-            border: 5px solid #ced7d4;
-            height: 370px;
-            border-radius: 10px;
-        }
-        .ceng-a{
-            text-align: center;
-            padding-top: 90px;
-            position: static;
-            z-index: 99999999999;
-        }
         .ceng-a p{
             margin-bottom: 5px;
             color: #333;
+        }
+        .wxts{
+            position: fixed;
+            background: rgba(0, 0, 0, 0.7490196078431373);
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            z-index: 999;
+            width: 100%;
+            float: none;
+            margin: 0 auto;
+            max-width: 750px;
         }
     </style>
     <script src="js/toutiao(1).js"></script>
@@ -230,12 +224,12 @@
             var args=Array.prototype.slice.call(arguments);args.unshift(method);meteor.push(args);return meteor}};for(var i=0;i<meteor.methods.length;i++){
             var key=meteor.methods[i];meteor[key]=meteor.factory(key)}meteor.load=function(){var js,fjs=d.getElementsByTagName(s)[0];js=d.createElement(s);
             js.src="https://analytics.snssdk.com/meteor.js/v1/"+l+"/sdk";fjs.parentNode.insertBefore(js,fjs)};meteor.load();if(meteor.invoked){return}
-            meteor.invoked=true;meteor.track("pageview")})(window,document,"script","1634379324708871");
+            meteor.invoked=true;meteor.track("pageview")})(window,document,"script","1630576637755395");
     </script>
     <!-- End Bytedance Tracking -->
     <script>
         function towx(){
-            <!--meteor.track('wechat', {convert_id: 1635105171793934});-->
+            <!--meteor.track('wechat', {convert_id: 1635298728336387});-->
             window.location.href = "weixin://";
         }
     </script>
@@ -246,7 +240,7 @@
 
         <img id="first" src="02/images/02_1_5.jpg" width="100%" height="95%">
         <img id="first" src="02/images/02_9_9.png" width="100%" height="95%">
-        <div width="100%" height="95%" style="text-align: center">内蒙古阿茹涵化妆品销售有限公司</div>
+        <div width="100%" height="95%" style="text-align: center">郑州丽仕化妆品有限公司</div>
         <a style="position: absolute;height: 50%;top: 40%;width:30%;left: 20%" href="javascript:;"
            class="jump2">&nbsp;</a>
         <a style="position: absolute;height: 50%;top: 40%;width:30%;right: 17%" href="javascript:;"
@@ -342,11 +336,11 @@
             </div>
             <p><span style="color: red">长按</span>可复制微信号，去微信搜索并添加微信</p>
             <p style="color: #f70000;font-size: 1.8em;text-align: center;margin-left: 0;margin-top: 0.5em;font-size: 1.1em">
-                <span style="background-color:#ff0 ; font-size: 2.3em" class="statistics02" id="wxh"></span>
+                <span style="background-color:#ff0 ; font-size: 2.3em" class="statistics02" id="wxh" oncopy="myFunctionCopy()"></span>
             </p>
             <p style="text-align: center;margin-left: 0;">
-                <a href="javascript:void(0);" class="goweixin jump_qrcode"
-                   style="background:red; color: #fff;display: inline-block;padding:6px 25px;">
+                <a href="javascript:void(0);" class="goweixin jump_qrcode dj"
+                   style="background:red; color: #fff;display: inline-block;padding:6px 25px;" data-copy="0">
                     去微信</a>
             </p>
         </div>
@@ -362,18 +356,26 @@
             <span style="text-align:center; position:absolute; right:0px;top:0px; border-radius:100%; width:35px; height:35px; line-height:30px; color:#fff;cursor: pointer;" class="close-pop"></span>
         </p>
         <div style="width: 194px;height: 40px;background: transparent;position: absolute;top: 165px;left: 65px;outline-style: none;border: none;-webkit-appearance: none; text-align: center; line-height: 75px;">
-            <span style="font-size:24px;font-weight:700;" class="statistics02 cp" id="tkwxh"></span>
+            <span style="font-size:24px;font-weight:700;" class="statistics02" id="tkwxh" oncopy="myFunctionCopy2()"></span>
         </div>
 
-        <a href="javascript:void(0);" class="goweixin2 jump_qrcode" style="
+        <a href="javascript:void(0);" class="goweixin2 jump_qrcode dj2" style="
 	    width: 100%;
     height: 60px;
     display: block;
-    margin-top: 260px;"></a>
+    margin-top: 260px;" data-copy="0"></a>
 
     </div>
-
 </div>
+
+<div class="wxts col-md-4" style="display: none; overflow: hidden; z-index: 1000;max-width: 480px;">
+    <div style="width:370px; height:180px; position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%); background:url(02/images/wxts.png) no-repeat; background-size: 100% 100%;text-align: center;">
+        <a href="javascript:void(0);" class="queren" style="width: 100%;height: 40px;display: block;margin-top: 130px;"></a>
+    </div>
+</div>
+
+
+
 <script type="text/javascript">
     var wxh = document.getElementById("wxh");
     var tkwxh = document.getElementById("tkwxh");
@@ -382,12 +384,28 @@
     tkwxh.innerHTML = account;
 
     $(".goweixin").click(function () {
-        window.location.href = "go_wx.html?wxh=" + account;
+        var copyid=$(".dj").attr("data-copy");
+        if(copyid==1){
+            window.location.href = "go_wx.html?wxh=" + account;
+            //location.href="weixin://";
+        }else{
+            $(".wxts").show();
+        }
     });
 
     $(".goweixin2").click(function () {
-        towx();
+        var copyid=$(".dj2").attr("data-copy");
+        if(copyid==1){
+            location.href="weixin://";
+        }else{
+            $(".wxts").show();
+        }
     });
+
+    $(".queren").click(function () {
+        $(".wxts").hide();
+    });
+
 
     $(".cp").on("copy", function (e) {
         <!--towx();-->
@@ -418,18 +436,15 @@
         $(".ceng").hide();
     });
 
-    function copyArticle(event) {
-        const range = document.createRange();
-        range.selectNode(document.getElementById('tkwxh'));
-        const selection = window.getSelection();
-        if (selection.rangeCount > 0) selection.removeAllRanges();
-        selection.addRange(range);
-        document.execCommand('copy');
-        window._agl && window._agl.push(['track', ['success', {
-            t: 3
-        }]]);
+    function myFunctionCopy(){
+        $(".dj").attr("data-copy",1);
+        window.location.href = "go_wx.html?wxh=" + account;
     }
-    document.getElementById('tkwxh').addEventListener('click', copyArticle, false);
+
+    function myFunctionCopy2(){
+        $(".dj2").attr("data-copy",1);
+        location.href="weixin://";
+    }
 </script>
 </body>
 </html>
